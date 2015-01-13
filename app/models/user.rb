@@ -8,6 +8,14 @@ class User < ActiveRecord::Base
   has_many :user_pages
   has_many :read_pages, through: :user_pages, source: :page
 
+  def authenticate_login(username_email, password)
+    if username_email == self.username || username_email == self.email
+      authenticate(password)
+    else
+      false
+    end
+  end
+
   def set_page_one
     uid = self.id
     UserPage.create(user_id: uid, page_id: 1)
