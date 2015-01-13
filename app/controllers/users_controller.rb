@@ -22,6 +22,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    if current_user
+      @current_user = current_user
+      @page = @current_user.farthest_page
+      redirect_to page_path(@page)
+    else
+      render "new"
+    end
+  end
 
   private
   def user_params
