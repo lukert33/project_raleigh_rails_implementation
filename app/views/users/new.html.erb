@@ -1,0 +1,28 @@
+<h3 class="error-heading">
+  <% if current_user %>
+  <%= @current_user.errors.messages if @current_user.errors.messages.any? %>
+  <% end %>
+</h3>
+
+<h1>Sign your copy of the book</h1>
+<ul>
+<%= form_for users_path do |f| %>
+  <li>
+    <%= f.label :username  %>
+    <%= f.text_field :username %>
+  </li>
+  <li>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </li>
+  <li>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </li>
+  <li>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </li>
+  <li> <%= f.submit %> </li>
+<% end %>
+</ul>
