@@ -1,0 +1,16 @@
+
+<h1>Log In</h1>
+<p class="error">
+  <%= session[:errors] if session[:errors] %>
+</p>
+<%= form_tag "/login" do %>
+  <%= label_tag "email or username" %>
+  <%= text_field_tag :username_email %>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+  <%= submit_tag %>
+<% end %>
+
+<br>
+
+<%= render template: "users/new" %>
