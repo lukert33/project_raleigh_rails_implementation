@@ -1,9 +1,9 @@
-<table>
+<table class="page-table">
   <tr>
     <td> <%= render "page_back" %> </td>
-    <td>
+    <td class="open-page">
       <p><%= @current_page.body %> </p>
-      <h3><%= @current_page.id %></h3>
+      <p><%= @current_page.id.to_s + "....just for testing "%></p>
     </td>
     <td> <%= render "page_next" %> </td>
   </tr>
