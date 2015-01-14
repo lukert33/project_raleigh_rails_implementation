@@ -21,6 +21,15 @@ class User < ActiveRecord::Base
     UserPage.create(user_id: uid, page_id: 1)
   end
 
+  def prev_read_page(page)
+    i = read_pages.index(page)
+    if i>0
+      read_pages[i-1]
+    else
+      read_pages.first
+    end
+  end
+
   def farthest_page
     self.read_pages.last
   end

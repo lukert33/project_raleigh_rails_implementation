@@ -10,16 +10,6 @@ class Page < ActiveRecord::Base
     !!challenge
   end
 
-  def user_prev_page(user)
-    sequence = user.read_pages
-    i = sequence.index(self)
-    if i>0
-      sequence[i-1]
-    else
-      sequence[i]
-    end
-  end
-
   def next_in_backlog(user)
     sequence = user.read_pages
     i = sequence.index(self)
