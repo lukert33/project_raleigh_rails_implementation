@@ -1,0 +1,8 @@
+<% if @current_page.has_challenge?  %>
+  <%= link_to "Go to challenge", challenge_path(@current_page.challenge)  %>
+<% else %>
+  <%= link_to page_path(@next_page), method: :patch do  %>
+    <div class="next-flip">Replace with next shape</div>
+  <% end %>
+<% end %>
+
