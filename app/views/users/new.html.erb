@@ -6,7 +6,7 @@
 
 <h1>Sign your copy of the book</h1>
 <ul>
-<%= form_for users_path do |f| %>
+<%= form_for(:user) do |f| %>
   <li>
     <%= f.label :username  %>
     <%= f.text_field :username %>
