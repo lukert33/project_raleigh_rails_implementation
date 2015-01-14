@@ -1,0 +1,51 @@
+table.page-table{
+  margin: 0 auto;
+}
+
+.prev-flip {
+  display: inline-block;
+  min-height: 100%;
+  background-color: rgba(189, 195, 199, 0.7);
+  min-width: 220px;
+  left: 0;
+}
+
+.prev-flip:hover{
+  background-color: rgba(189, 195, 199, 1.0);
+}
+
+.next-flip {
+  display: inline-block;
+  min-height: 100%;
+  background-color: rgba(52, 152, 219, 0.3);
+  min-width: 220px;
+  right: 0;
+}
+.next-flip:hover{
+  cursor: pointer;
+  border: 1px solid gold;
+  background-color: rgba(52, 152, 219,0.7);
+}
+
+.open-page{
+  height: 880px;
+  border: 1px solid black;
+  width: 724px;
+  display: inline-block;
+}
+
+.open-page p {
+  font-size: 1.4em;
+  line-height: 1.3em;
+  padding-left: 2.3em;
+  padding-right: 2.3em;
+  text-align: justify;
+}
+
+.open-page p {
+  font-size: 1.4em;
+  line-height: 1.3em;
+  padding-left: 2.3em;
+  padding-right: 2.3em;
+  text-align: justify;
+}
